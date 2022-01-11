@@ -1,0 +1,12 @@
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+
+post install library 
+
+-> servo
+-> stepper
+-> adafruit BusIO, Adafruit Circuit playground
+-> adafruit GFX library
+-> adafruit SSD1306
+-> arduinoJson
+-> Wifimanager 
