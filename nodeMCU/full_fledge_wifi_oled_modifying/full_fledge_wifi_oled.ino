@@ -15,12 +15,15 @@
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET); 
 
+//defined pins
+#define pressing_pin 15
+
 int count = 0; // flag for reseting
 int pressing = 0;
 void setup()
 { 
   count = 0;
-  pinMode(1, INPUT);
+  pinMode(pressing_pin, INPUT);
  
   
   //Oled Display setup code below
@@ -97,7 +100,7 @@ void loop()
     display.display();
     Serial.println(count);
   delay(5000);
-  pressing = digitalRead(15); // GPIO 1 pin value thats attached to a button
+  pressing = digitalRead(pressing_pin); // GPIO 1 pin value thats attached to a button
 
   //if button is pressed then if function will run
   if(pressing){
